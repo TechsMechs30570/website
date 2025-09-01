@@ -4,6 +4,7 @@
     <title>Techs Mechs Robotics #30570</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -68,6 +69,12 @@
             gap: 2rem;
             justify-content: center;
         }
+        .team-mentors {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
         .member-card {
             background: #f7f7f7;
             border-radius: 8px;
@@ -106,123 +113,209 @@ table {
 font-family: Arial;
 font-size: 2.5rem;
 }
+
+/* Style the tab buttons */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Style the active/current tab button */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none; /* Hidden by default */
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+
     </style>
 </head>
 <body>
-    <header>
-          <table style="width:100%">
-  <tr>
-    <th style="width:75%">
-    	<table style="width:100%">
-        	<tr>
-            	<th>Techs Mechs Robotics #30570 </th>
-            </tr>
-            <tr>
-            	<td><div class="subtitle">Middle Schoolers Learning, Building, and Competing in Robotics</div></td>
-            </tr>
-        </table>
-    </th>
-    <th> <img src="Logo.png" alt="Seven" width="200" height="200"></th>
-  </tr>
-</table>
-    </header>
-    <main>
-        <section>
-            <h2>About Our Team</h2>
-            <p>We are a group of passionate middle schoolers on a mission to learn robotics, build awesome robots, and compete with other teams. We are based in Flower Mound, Texas, and our team, TechsMechs, was formed this year (2025). Follow our journey as we design, build, and program our robots!
-</p>
-        </section>
-        <section>
-            <h2>Team Progress Updates</h2>
-            <div class="progress-gallery">
-                <div class="progress-item">
-                    <img src="Robot-Photo.jpg" alt="Robot Build 1">
-                    <div><strong>Chassis Assembly</strong></div>
-                    <div>Finished up the arm and chassis!</div>
-                </div>
-                <div class="progress-item">
-                    <img src="Wires-Photo.jpg" alt="Robot Build 2">
-                    <div><strong>Electronics Setup</strong></div>
-                    <div>Wiring up sensors and controllers. Lots of teamwork!</div>
-                </div>
-                <div class="progress-item">
-                    <img src="Code-Photo.png" alt="Robot Build 3">
-                    <div><strong>Programming</strong></div>
-                    <div>Testing code to make the robot move and follow lines.</div>
-                </div>
-                <!-- Add more progress items as needed -->
-            </div>
-        </section>
-        <section>
-            <h2>Outreach</h2>
-            <p>On July 18th, 2025 we went to a Hilton Hotels Corporate Office in Dallas for Hilton kids day where we presented the basics of FTC to over 200 parents and children. We also demoed our robot and let the kids who came for the Hilton kids day event to test drive our robot. We made pamphlets with information about FLL (first Lego League), FTC, and our Team. We all had a wonderful time for our first Outreach presentation for the season, and we are looking forward to doing many more.
-        </p>        
-            <div class="progress-gallery">
-                <div class="progress-item">
-                    <img src="Charith-Photo.jpg" alt="Outreach Photo 1">
-                    <div><strong>Presenting</strong></div>
-                    <div>Presented to 150 kids!</div>
-                </div>
-                <div class="progress-item">
-                    <img src="Demo.jpg.jpg" alt="Outreach Photo 2">
-                    <div><strong>Demo</strong></div>
-                    <div>Letting the kids try out the robot!</div>
-                </div>
-                <div class="progress-item">
-                    <img src="Pamphlet.png.png" alt="Outreach Photo 3">
-                    <div><strong>Pamphlets</strong></div>
-                    <div>Gave out pamphlets to the parents.</div>
-                </div>
-                <!-- Add more progress items as needed -->
-            </div>
-        </section>
-        <section>
-            <h2>Meet the Team</h2>
-            <div class="team-members">
-                <div class="member-card">
-                    <img src="Ajay-Photo.jpg" alt="Team Member 1">
-                    <div class="member-name">Ajay Mathukumalli</div>
-                    <div class="member-role">Team Member</div>
-                </div>
-                <div class="member-card">
-                    <img src="Jay-Photo.jpg" alt="Team Member 2">
-                    <div class="member-name">Jayadev Pappu</div>
-                    <div class="member-role">Team Member</div>
-                </div>
-                <div class="member-card">
-                    <img src="Charith-Photo.jpg" alt="Team Member 3">
-                    <div class="member-name">Charith Basnayake</div>
-                    <div class="member-role">Team Member</div>
-                </div>
-                <div class="member-card">
-                    <img src="Jason-Photo.jpg" alt="Team Member 4">
-                    <div class="member-name">Jason Westgate</div>
-                    <div class="member-role">Team Member</div>
-                </div>
-                <div class="member-card">
-                    <img src="Agilin-photo.jpg" alt="Team Member 5">
-                    <div class="member-name">Agilan Kuberan</div>
-                    <div class="member-role">Team Member</div>
-                </div>
-                <div class="member-card">
-                    <div class="member-name">Raghu Mathukumalli</div>
-                    <div class="member-role">Mentor</div>
-                </div>
-                <div class="member-card">
-                    <div class="member-name">Tejasvi Gundapuneedi</div>
-                    <div class="member-role">Mentor</div>
-                </div>
-                <!-- Add more member cards as needed -->
-            </div>
-        </section>
-    </main>
-    <footer>
-       <p> Our Email - techsmechs30570@gmail.com <br>
-      Our Youtube Channel - <a href="https://www.youtube.com/@TechsMechs30570">youtube.com/@TechsMechs30570</a></p>
-    </footer>
-</body>
-                    </html>
 
+<header>
+    <table style="width:100%">
+        <tr>
+            <th style="width:75%">
+                <table style="width:100%">
+                    <tr>
+                        <th>Techs Mechs Robotics #30570</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="subtitle">Middle Schoolers Learning, Building, and Competing
+                                in Robotics
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </th>
+            <th><img src="images/Team-Logo.png" alt="Seven" width="200" height="200"></th>
+        </tr>
+    </table>
+</header>
+<main>
+    <section>
+        <h2>About Our Team</h2>
+        <p>We are a group of passionate middle schoolers on a mission to learn robotics, build
+            awesome robots, and compete with other teams. We are based in Flower Mound, Texas, and
+            our team, TechsMechs, was formed this year (2025). Follow our journey as we design,
+            build, and program our robots!
+        </p>
+    </section>
+    <section>
+        <h2>Team Progress Updates</h2>
+        <div class="progress-gallery">
+            <div class="progress-item">
+                <img src="images/Robot-Photo.jpg" alt="Robot Build 1">
+                <div><strong>Chassis Assembly</strong></div>
+                <div>Finished up the arm and chassis!</div>
+            </div>
+            <div class="progress-item">
+                <img src="images/Wires-Photo.jpg" alt="Robot Build 2">
+                <div><strong>Electronics Setup</strong></div>
+                <div>Wiring up sensors and controllers. Lots of teamwork!</div>
+            </div>
+            <div class="progress-item">
+                <img src="images/Code-Photo.png" alt="Robot Build 3">
+                <div><strong>Programming</strong></div>
+                <div>Testing code to make the robot move and follow lines.</div>
+            </div>
+            <!-- Add more progress items as needed -->
+        </div>
+    </section>
+    <section>
+        <h2>Outreach</h2>
+        <p>On July 18th, 2025 we went to a Hilton Hotels Corporate Office in Dallas for Hilton kids
+            day where we presented the basics of FTC to over 200 parents and children. We also
+            demoed our robot and let the kids who came for the Hilton kids day event to test drive
+            our robot. We made pamphlets with information about FLL (first Lego League), FTC, and
+            our Team. We all had a wonderful time for our first Outreach presentation for the
+            season, and we are looking forward to doing many more.
+        </p>
+        <div class="progress-gallery">
+            <div class="progress-item">
+                <img src="images/Charith-Photo.jpg" alt="Outreach Photo 1">
+                <div><strong>Presenting</strong></div>
+                <div>Presented to 150 kids!</div>
+            </div>
+            <div class="progress-item">
+                <img src="images/Demo.jpg" alt="Outreach Photo 2">
+                <div><strong>Demo</strong></div>
+                <div>Letting the kids try out the robot!</div>
+            </div>
+            <div class="progress-item">
+                <img src="images/Pamphlet.png" alt="Outreach Photo 3">
+                <div><strong>Pamphlets</strong></div>
+                <div>Gave out pamphlets to the parents.</div>
+            </div>
+            <!-- Add more progress items as needed -->
+        </div>
+    </section>
+    <section>
+        <h2>Meet the Team</h2>
+        <div class="team-members">
+            <div class="member-card">
+                <img src="images/Ajay-Photo.jpg" alt="Team Member 1">
+                <div class="member-name">Ajay Mathukumalli</div>
+                <div class="member-role">Team Member</div>
+            </div>
+            <div class="member-card">
+                <img src="images/Jay-Photo.jpg" alt="Team Member 2">
+                <div class="member-name">Jayadev Pappu</div>
+                <div class="member-role">Team Member</div>
+            </div>
+            <div class="member-card">
+                <img src="images/Charith-Photo.jpg" alt="Team Member 3">
+                <div class="member-name">Charith Basnayake</div>
+                <div class="member-role">Team Member</div>
+            </div>
+            <div class="member-card">
+                <img src="images/Jason-Photo.jpg" alt="Team Member 4">
+                <div class="member-name">Jason Westgate</div>
+                <div class="member-role">Team Member</div>
+            </div>
+            <div class="member-card">
+                <img src="images/Agilin-Photo.jpg" alt="Team Member 5">
+                <div class="member-name">Agilan Kuberan</div>
+                <div class="member-role">Team Member</div>
+            </div>
+        </div>
+        <h3>Mentors</h3>
+        <div class="team-mentors">
+            <div class="member-card">
+                <div class="member-name">Raghu Mathukumalli</div>
+                <div class="member-role">Mentor</div>
+            </div>
+            <div class="member-card">
+                <div class="member-name">Tejasvi Gundapuneedi</div>
+                <div class="member-role">Mentor</div>
+            </div>
+            <!-- Add more member cards as needed -->
+        </div>
+    </section>
+    <section>
+		
+        <div class="tab">
+            <button class="tablinks" onclick="openTab(event, 'Tab1')">Tab 5</button>
+            <button class="tablinks" onclick="openTab(event, 'Tab2')">Tab 2</button>
+            <button class="tablinks" onclick="openTab(event, 'Tab3')">Tab 3</button>
+        </div>
+
+		 <div id="Tab1" class="tabcontent">
+            <h3>hi</h3>
+            <p>shrek</p>
+        </div>
+
+        <div id="Tab5" class="tabcontent">
+            <h3>Content of Tab 1</h3>
+            <p>This is the content for the first tab.</p>
+        </div>
+
+        <div id="Tab2" class="tabcontent">
+            <h3>Content of Tab 2</h3>
+            <p>This is the content for the second tab.</p>
+        </div>
+
+        <div id="Tab3" class="tabcontent">
+            <h3>Content of Tab 3</h3>
+            <p>This is the content for the third tab.</p>
+        </div>
+
+    </section>
+
+</main>
+<footer>
+    <p> Our Email - techsmechs30570@gmail.com <br>
+        Our Youtube Channel - <a href="https://www.youtube.com/@TechsMechs30570">youtube.com/@TechsMechs30570</a>
+    </p>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
 
 
 
