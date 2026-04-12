@@ -122,14 +122,14 @@ font-size: 2.5rem;
         input[type="radio"] {
             display: none;
         }
-        input[type="radio"]:checked + label {
+        .tab input[type="radio"]:checked + label {
             background: #1976d2;
             color: white;
         }
-        .tab-content {
+        .tab .tab-content {
             display: none;
         }
-        input[type="radio"]:checked ~ .tab-content {
+        .tab input[type="radio"]:checked ~ .tab-content {
             display: block;
         }
     </style>
@@ -205,84 +205,88 @@ font-size: 2.5rem;
         <section>
             <h2>Meet the Team</h2>
             <div class="tab-container">
-                <input type="radio" id="tab1" name="tabs" checked>
-                <label for="tab1" class="tab-button">25-26 Season</label>
-                <div class="tab-content">
-                    <div class="team-members">
-                        <div class="member-card">
-                            <img src="Ajay-Photo.jpg" alt="Team Member 1">
-                            <div class="member-name">Ajay Mathukumalli</div>
-                            <div class="member-role">Team Member</div>
+                <div class="tab">
+                    <input type="radio" id="tab1" name="tabs">
+                    <label for="tab1" class="tab-button">25-26 Season</label>
+                    <div class="tab-content">
+                        <div class="team-members">
+                            <div class="member-card">
+                                <img src="Ajay-Photo.jpg" alt="Team Member 1">
+                                <div class="member-name">Ajay Mathukumalli</div>
+                                <div class="member-role">Team Member</div>
+                            </div>
+                            <div class="member-card">
+                                <img src="Jay-Photo.jpg" alt="Team Member 2">
+                                <div class="member-name">Jayadev Pappu</div>
+                                <div class="member-role">Team Member</div>
+                            </div>
+                            <div class="member-card">
+                                <img src="Charith-Photo.jpg" alt="Team Member 3">
+                                <div class="member-name">Charith Basnayake</div>
+                                <div class="member-role">Team Member</div>
+                            </div>
+                            <div class="member-card">
+                                <img src="Jason-Photo.jpg" alt="Team Member 4">
+                                <div class="member-name">Jason Westgate</div>
+                                <div class="member-role">Team Member</div>
+                            </div>
+                            <div class="member-card">
+                                <img src="Agilin-photo.jpg" alt="Team Member 5">
+                                <div class="member-name">Agilan Kuberan</div>
+                                <div class="member-role">Team Member</div>
+                            </div>
+                            <div class="member-card">
+                                <img src="Enzo-Photo.jpg" alt="Team Member 6">
+                                <div class="member-name">Enzo Woodmansee</div>
+                                <div class="member-role">Team Member</div>
+                            </div>
+                            <div class="member-card">
+                                <div class="member-name">Raghu Mathukumalli</div>
+                                <div class="member-role">Mentor</div>
+                            </div>
+                            <div class="member-card">
+                                <div class="member-name">Tejasvi Gundapuneedi</div>
+                                <div class="member-role">Mentor</div>
+                            </div>
+                            <!-- Add more member cards as needed -->
                         </div>
-                        <div class="member-card">
-                            <img src="Jay-Photo.jpg" alt="Team Member 2">
-                            <div class="member-name">Jayadev Pappu</div>
-                            <div class="member-role">Team Member</div>
-                        </div>
-                        <div class="member-card">
-                            <img src="Charith-Photo.jpg" alt="Team Member 3">
-                            <div class="member-name">Charith Basnayake</div>
-                            <div class="member-role">Team Member</div>
-                        </div>
-                        <div class="member-card">
-                            <img src="Jason-Photo.jpg" alt="Team Member 4">
-                            <div class="member-name">Jason Westgate</div>
-                            <div class="member-role">Team Member</div>
-                        </div>
-                        <div class="member-card">
-                            <img src="Agilin-photo.jpg" alt="Team Member 5">
-                            <div class="member-name">Agilan Kuberan</div>
-                            <div class="member-role">Team Member</div>
-                        </div>
-                        <div class="member-card">
-                            <img src="Enzo-Photo.jpg" alt="Team Member 6">
-                            <div class="member-name">Enzo Woodmansee</div>
-                            <div class="member-role">Team Member</div>
-                        </div>
-                        <div class="member-card">
-                            <div class="member-name">Raghu Mathukumalli</div>
-                            <div class="member-role">Mentor</div>
-                        </div>
-                        <div class="member-card">
-                            <div class="member-name">Tejasvi Gundapuneedi</div>
-                            <div class="member-role">Mentor</div>
-                        </div>
-                        <!-- Add more member cards as needed -->
                     </div>
                 </div>
-                <input type="radio" id="tab2" name="tabs">
-                <label for="tab2" class="tab-button">26-27 Season</label>
-                <div class="tab-content">
-                    <div class="team-members">
-                        <div class="member-card">
-                            <img src="Ajay-Photo.jpg" alt="Team Member 1">
-                            <div class="member-name">Ajay Mathukumalli</div>
-                            <div class="member-role">Team Member</div>
+                <div class="tab">
+                    <input type="radio" id="tab2" name="tabs" checked>
+                    <label for="tab2" class="tab-button">26-27 Season</label>
+                    <div class="tab-content">
+                        <div class="team-members">
+                            <div class="member-card">
+                                <img src="Ajay-Photo.jpg" alt="Team Member 1">
+                                <div class="member-name">Ajay Mathukumalli</div>
+                                <div class="member-role">Team Member</div>
+                            </div>
+                            <div class="member-card">
+                                <img src="Jay-Photo.jpg" alt="Team Member 2">
+                                <div class="member-name">Jayadev Pappu</div>
+                                <div class="member-role">Team Member</div>
+                            </div>
+                            <div class="member-card">
+                                <img src="Agilin-photo.jpg" alt="Team Member 5">
+                                <div class="member-name">Agilan Kuberan</div>
+                                <div class="member-role">Team Member</div>
+                            </div>
+                            <div class="member-card">
+                                <img src="Enzo-Photo.jpg" alt="Team Member 6">
+                                <div class="member-name">Enzo Woodmansee</div>
+                                <div class="member-role">Team Member</div>
+                            </div>
+                            <div class="member-card">
+                                <div class="member-name">Raghu Mathukumalli</div>
+                                <div class="member-role">Mentor</div>
+                            </div>
+                            <div class="member-card">
+                                <div class="member-name">Tejasvi Gundapuneedi</div>
+                                <div class="member-role">Mentor</div>
+                            </div>
+                            <!-- Add more member cards as needed -->
                         </div>
-                        <div class="member-card">
-                            <img src="Jay-Photo.jpg" alt="Team Member 2">
-                            <div class="member-name">Jayadev Pappu</div>
-                            <div class="member-role">Team Member</div>
-                        </div>
-                        <div class="member-card">
-                            <img src="Agilin-photo.jpg" alt="Team Member 5">
-                            <div class="member-name">Agilan Kuberan</div>
-                            <div class="member-role">Team Member</div>
-                        </div>
-                        <div class="member-card">
-                            <img src="Enzo-Photo.jpg" alt="Team Member 6">
-                            <div class="member-name">Enzo Woodmansee</div>
-                            <div class="member-role">Team Member</div>
-                        </div>
-                        <div class="member-card">
-                            <div class="member-name">Raghu Mathukumalli</div>
-                            <div class="member-role">Mentor</div>
-                        </div>
-                        <div class="member-card">
-                            <div class="member-name">Tejasvi Gundapuneedi</div>
-                            <div class="member-role">Mentor</div>
-                        </div>
-                        <!-- Add more member cards as needed -->
                     </div>
                 </div>
             </div>
