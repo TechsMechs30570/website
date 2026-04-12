@@ -106,6 +106,31 @@ table {
 font-family: Arial;
 font-size: 2.5rem;
 }
+        .outreach-gallery {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .outreach-box {
+            background: #f7f7f7;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+            width: 220px;
+            padding: 1rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .outreach-box img {
+            width: 105%;
+            height: 140px;
+            object-fit: cover;
+            border-radius: 6px;
+            margin-bottom: 0.5rem;
+            background: #e0e0e0;
+        }
     </style>
 </head>
 <body>
@@ -155,25 +180,26 @@ font-size: 2.5rem;
         </section>
         <section>
             <h2>Outreach</h2>
-            <p>At our outreach events, including Hilton Kids Day and presenting to the North Texas STEM Alliance, we have spread awareness about FTC and the FIRST Program to hundreds of children. We also have helped younger teams bridge the gap between FLL and FTC, as well as tell hem and letting them try out our robot. We also gave out pamplets that tell about FIRST. We have had an overall great time helping out in and performing these outreach events, and we hope to have more.
+            <p>At our outreach events, including Hilton Kids Day and presenting to the North Texas STEM Alliance, we have spread awareness about FTC and the FIRST Program to hundreds of children. We also have helped younger teams bridge the gap between FLL and FTC, as well as tell them about and letting them try out our robot. We also gave out pamphlets that tell about FIRST. We have had an overall great time helping out in and performing these outreach events, and we hope to have more.
         </p>        
-            <div class="progress-gallery">
-                <div class="progress-item">
-                    <img src="Presentation.jpg" alt="Outreach Photo 1">
-                    <div><strong>Presenting</strong></div>
-                    <div>Presented to 150 kids!</div>
+            <div class="outreach-gallery">
+                <div class="outreach-box">
+                    <img src="Presentation.jpg" alt="Hilton Kids Day Photo 1">
+                    <img src="Demo.jpg.jpg" alt="Hilton Kids Day Photo 2">
+                    <div><strong>Hilton Kids Day</strong></div>
+                    <div>Presented to 150 kids and let them try out the robot!</div>
                 </div>
-                <div class="progress-item">
-                    <img src="Demo.jpg.jpg" alt="Outreach Photo 2">
-                    <div><strong>Demo</strong></div>
-                    <div>Letting the kids try out the robot!</div>
+                <div class="outreach-box">
+                    <img src="NTX-Outreach1-Photo.JPG" alt="NTX STEM Alliance Photo 1">
+                    <img src="NTX-Outreach2-Photo.jpeg" alt="NTX STEM Alliance Photo 2">
+                    <div><strong>NTX STEM Alliance</strong></div>
+                    <div>Spread awareness about FTC and FIRST to over 40 children in FLL, helping bridge the gap between FLL and FTC.</div>
                 </div>
-                <div class="progress-item">
-                    <img src="Pamphlet.png.png" alt="Outreach Photo 3">
+                <div class="outreach-box">
+                    <img src="Pamphlet.png.png" alt="Flyer">
                     <div><strong>Pamphlets</strong></div>
-                    <div>Gave out pamphlets to the parents.</div>
+                    <div>Gave out pamphlets to parents about FIRST.</div>
                 </div>
-                <!-- Add more progress items as needed -->
             </div>
         </section>
         <section>
