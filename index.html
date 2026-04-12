@@ -131,6 +131,26 @@ font-size: 2.5rem;
             margin-bottom: 0.5rem;
             background: #e0e0e0;
         }
+        .sponsorship-gallery {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .sponsor-item {
+            text-align: center;
+        }
+        .sponsor-item img {
+            height: 150px;
+            object-fit: contain;
+            margin-bottom: 0.75rem;
+        }
+        .sponsor-name {
+            font-weight: bold;
+            color: #1976d2;
+            font-size: 1.1rem;
+        }
     </style>
 </head>
 <body>
@@ -245,6 +265,19 @@ font-size: 2.5rem;
                 </div>
 
                 <!-- Add more member cards as needed -->
+            </div>
+        </section>
+        <section>
+            <h2>Our Sponsors</h2>
+            <div class="sponsorship-gallery">
+                <div class="sponsor-item">
+                    <img src="GeneHassLogo-Photo.jpg" alt="Gene Hass Foundation Logo">
+                    <div class="sponsor-name">Gene Hass Foundation</div>
+                </div>
+                <div class="sponsor-item">
+                    <img src="ColdStone-Photo.png" alt="Cold Stone Creamery Logo">
+                    <div class="sponsor-name">Cold Stone Creamery</div>
+                </div>
             </div>
         </section>
     </main>
