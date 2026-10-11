@@ -109,7 +109,8 @@
             grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 1.25rem;
         }
-        .season-photo-gallery img {
+        .season-photo-gallery img,
+        .season-photo-gallery video {
             display: block;
             width: 100%;
             max-height: 360px;
@@ -644,7 +645,10 @@ font-size: 2.5rem;
                     <p>We’re designing and building our BioBuzz robot together. Here are a few highlights from our early build sessions.</p>
                     <div class="season-photo-gallery">
                         <figure>
-                            <img src="pictures/team-assets/DIY Hive.jpg" alt="Techs Mechs students working together at the DIY Hive">
+                            <video controls playsinline preload="metadata" aria-label="Video of Techs Mechs students working together at the DIY Hive">
+                                <source src="pictures/team-assets/DIY-Hive.mov">
+                                Your browser does not support this video. <a href="pictures/team-assets/DIY-Hive.mov">Open the video file</a>.
+                            </video>
                             <figcaption>Learning and collaborating at the DIY Hive.</figcaption>
                         </figure>
                         <figure>
