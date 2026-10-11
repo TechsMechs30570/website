@@ -55,12 +55,96 @@
             text-align: center;
         }
         .progress-item img {
-            width: 105%;
+            width: 100%;
             height: 140px;
             object-fit: cover;
             border-radius: 6px;
             margin-bottom: 0.5rem;
             background: #e0e0e0;
+        }
+        .training-intro {
+            max-width: 760px;
+            line-height: 1.6;
+        }
+        .training-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+        }
+        .training-gallery figure,
+        .season-photo-gallery figure {
+            margin: 0;
+        }
+        .training-gallery figure {
+            padding: 1rem;
+            border-radius: 8px;
+            background: #f7f7f7;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        }
+        .training-gallery img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 6px;
+        }
+        .training-gallery figcaption,
+        .season-photo-gallery figcaption {
+            margin-top: 0.6rem;
+            line-height: 1.5;
+        }
+        .season-list {
+            display: grid;
+            gap: 1.5rem;
+        }
+        .season-card {
+            width: auto;
+            text-align: left;
+        }
+        .season-card h3 {
+            margin-top: 0;
+            color: #123d78;
+        }
+        .season-photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.25rem;
+        }
+        .season-photo-gallery img {
+            display: block;
+            width: 100%;
+            max-height: 360px;
+            object-fit: contain;
+            border-radius: 6px;
+            background: #fff;
+        }
+        .award-photo-placeholder {
+            min-height: 150px;
+            margin-top: 1rem;
+            padding: 1.25rem;
+            display: grid;
+            place-content: center;
+            border: 2px dashed #8398b5;
+            border-radius: 8px;
+            background: #f7f9fc;
+            color: #3d4c63;
+            text-align: center;
+        }
+        .season-award-photo {
+            max-width: 360px;
+            margin: 1rem auto 0;
+        }
+        .season-award-photo img {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 360px;
+            object-fit: contain;
+            border-radius: 8px;
+            background: #f7f9fc;
+        }
+        .season-award-photo figcaption {
+            margin-top: 0.6rem;
+            text-align: center;
         }
         .team-members {
             display: flex;
@@ -131,6 +215,88 @@ font-size: 2.5rem;
             margin-bottom: 0.5rem;
             background: #e0e0e0;
         }
+        .outreach-feature {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1.25rem;
+            margin: 1rem 0 1.5rem;
+        }
+        .outreach-feature figure {
+            margin: 0;
+            padding: 1rem;
+            border-radius: 8px;
+            background: #f7f7f7;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+        }
+        .outreach-feature img,
+        .outreach-feature video {
+            display: block;
+            width: 100%;
+            max-height: 360px;
+            border-radius: 6px;
+            background: #111;
+            object-fit: contain;
+        }
+        .outreach-feature figcaption {
+            margin-top: 0.6rem;
+            line-height: 1.5;
+        }
+        .outreach-event-placeholder {
+            width: 100%;
+            min-height: 100px;
+            margin: 0.5rem 0;
+            padding: 1rem;
+            display: grid;
+            place-content: center;
+            border: 2px dashed #8398b5;
+            border-radius: 6px;
+            background: #f7f9fc;
+            color: #3d4c63;
+            line-height: 1.5;
+        }
+        main img:not(.sponsor-item img) {
+            cursor: zoom-in;
+        }
+        main img:not(.sponsor-item img):focus-visible {
+            outline: 3px solid #1976d2;
+            outline-offset: 3px;
+        }
+        .photo-viewer {
+            width: min(96vw, 1200px);
+            max-width: 96vw;
+            max-height: 96vh;
+            padding: 2.75rem 1rem 1rem;
+            border: 0;
+            border-radius: 10px;
+            background: #111;
+            color: #fff;
+        }
+        .photo-viewer::backdrop {
+            background: rgba(0, 0, 0, 0.88);
+        }
+        .photo-viewer img {
+            display: block;
+            max-width: 100%;
+            max-height: 82vh;
+            margin: 0 auto;
+            object-fit: contain;
+        }
+        .photo-viewer p {
+            margin: 0.75rem 2.5rem 0;
+            text-align: center;
+        }
+        .photo-viewer-close {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.75rem;
+            padding: 0.35rem 0.7rem;
+            border: 1px solid #fff;
+            border-radius: 5px;
+            background: #222;
+            color: #fff;
+            font: inherit;
+            cursor: pointer;
+        }
         .sponsorship-gallery {
             display: flex;
             gap: 2rem;
@@ -151,166 +317,670 @@ font-size: 2.5rem;
             color: #1976d2;
             font-size: 1.1rem;
         }
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 1rem;
+        }
+        header {
+            padding: 1.5rem 1.25rem 0;
+            letter-spacing: normal;
+        }
+        .header-branding {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+        .header-branding img {
+            width: 110px;
+            height: 110px;
+            object-fit: contain;
+        }
+        .header-branding h1 {
+            margin: 0;
+            font-size: clamp(1.8rem, 4vw, 2.8rem);
+        }
+        .header-branding .subtitle {
+            margin: 0.5rem 0 0;
+        }
+        .site-nav {
+            margin: 1.5rem -1.25rem 0;
+            padding: 0.8rem 1rem;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.5rem 1.5rem;
+            background: #003783;
+        }
+        .site-nav a {
+            color: #fff;
+            font-size: 1rem;
+            text-decoration: none;
+        }
+        .site-nav a:hover,
+        .site-nav a:focus {
+            text-decoration: underline;
+        }
+        main {
+            max-width: 1100px;
+            padding: 2rem;
+        }
+        section {
+            scroll-margin-top: 1rem;
+        }
+        .intro {
+            padding: 2rem;
+            border-radius: 10px;
+            background: #f1f6ff;
+        }
+        .intro h2 {
+            margin-top: 0;
+            color: #123d78;
+            font-size: clamp(1.7rem, 4vw, 2.4rem);
+        }
+        .button-link {
+            display: inline-block;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+            padding: 0.75rem 1rem;
+            border-radius: 6px;
+            background: #0756b3;
+            color: #fff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .button-link:hover,
+        .button-link:focus {
+            background: #003783;
+        }
+        .sponsorship-section {
+            padding: 1.25rem;
+            border: 2px solid #d7e5fb;
+            border-radius: 10px;
+            background: #f9fbff;
+        }
+        .sponsorship-section > h2 {
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+        .support-heading {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 120px;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .support-heading h2 {
+            margin: 0 0 0.4rem;
+        }
+        .support-heading p {
+            margin: 0.35rem 0;
+            font-size: 0.9rem;
+        }
+        .support-heading img {
+            display: block;
+            width: 120px;
+            height: 100px;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+        .support-options-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+            gap: 1.25rem;
+            align-items: start;
+        }
+        .support-options-grid h2 {
+            margin: 0 0 0.4rem;
+            font-size: 1.25rem;
+        }
+        .support-options-grid > div > p {
+            margin: 0.4rem 0;
+            font-size: 0.85rem;
+        }
+        .tier-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.6rem;
+            margin-top: 0.75rem;
+        }
+        .donation-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.6rem;
+            margin-top: 0.75rem;
+        }
+        .tier-card,
+        .donation-card {
+            padding: 0.75rem;
+            border: 1px solid #d9e2ef;
+            border-radius: 8px;
+            background: #fff;
+        }
+        .tier-card,
+        .donation-card,
+        .support-contact {
+            font-size: 0.82rem;
+        }
+        .tier-card h3,
+        .donation-card h3 {
+            margin: 0 0 0.3rem;
+            color: #123d78;
+            font-size: 1rem;
+        }
+        .tier-price {
+            margin: 0 0 0.3rem;
+            color: #0756b3;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        .tier-card ul {
+            margin: 0;
+            padding-left: 1rem;
+            line-height: 1.4;
+        }
+        .donation-section {
+            margin: 0;
+        }
+        .payment-qr {
+            display: block;
+            width: min(100%, 96px);
+            height: auto;
+            max-height: 105px;
+            margin: 0.35rem auto;
+            margin-right: auto;
+            margin-left: auto;
+            object-fit: contain;
+            border: 1px solid #d9e2ef;
+            border-radius: 8px;
+            background: #fff;
+        }
+        .donation-card p {
+            margin: 0.35rem 0 0;
+            line-height: 1.4;
+        }
+        .tax-note {
+            margin: 0.75rem 0 0;
+            padding: 0.65rem 0.8rem;
+            border-left: 4px solid #0756b3;
+            border-radius: 4px;
+            background: #eef4fc;
+            font-size: 0.78rem;
+            line-height: 1.4;
+        }
+        .support-contact {
+            margin: 0.6rem 0 0;
+        }
+        .support-contact p {
+            margin: 0;
+        }
+        .sponsor-item {
+            display: block;
+            width: 200px;
+            padding: 1rem;
+            border-radius: 8px;
+            background: #f7f7f7;
+        }
+        .sponsor-item img {
+            max-width: 100%;
+            height: 120px;
+        }
+        .team-members {
+            gap: 1rem;
+        }
+        .current-team-members {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+        .current-team-members .member-card {
+            width: auto;
+        }
+        .member-card {
+            box-sizing: border-box;
+        }
+        .mentor-details,
+        .alumni-details {
+            margin-top: 2rem;
+            border: 1px solid #d9e2ef;
+            border-radius: 8px;
+            background: #f9fbff;
+        }
+        .mentor-details summary,
+        .alumni-details summary {
+            padding: 1rem 1.25rem;
+            color: #123d78;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .mentor-details summary:focus-visible,
+        .alumni-details summary:focus-visible {
+            outline: 3px solid #0756b3;
+            outline-offset: 3px;
+        }
+        .mentor-details .team-members,
+        .alumni-details .team-members {
+            padding: 0 1rem 1rem;
+        }
+        footer {
+            padding: 1.5rem 1rem;
+            background: #f1f6ff;
+        }
+        @media (max-width: 600px) {
+            header {
+                font-size: 1rem;
+            }
+            .outreach-feature {
+                grid-template-columns: 1fr;
+            }
+            .header-branding {
+                gap: 0.75rem;
+                text-align: left;
+            }
+            .header-branding img {
+                width: 72px;
+                height: 72px;
+            }
+            .site-nav {
+                gap: 0.5rem 1rem;
+            }
+            main {
+                margin: 1rem auto;
+                padding: 1.25rem;
+            }
+            .intro,
+            .sponsorship-section {
+                padding: 1.25rem;
+            }
+            .support-options-grid {
+                grid-template-columns: 1fr;
+            }
+            .support-heading img {
+                width: 90px;
+                height: 80px;
+            }
+            .current-team-members {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+        @media (max-width: 760px) {
+            .support-options-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-          <table style="width:100%">
-  <tr>
-    <th style="width:75%">
-    	<table style="width:100%">
-        	<tr>
-            	<th>Techs Mechs Robotics #30570 </th>
-            </tr>
-            <tr>
-            	<td><div class="subtitle">Middle Schoolers Learning, Building, and Competing in Robotics</div></td>
-            </tr>
-        </table>
-    </th>
-    <th> <img src="Logo.png" alt="Seven" width="200" height="200"></th>
-  </tr>
-</table>
+        <div class="header-branding">
+            <div>
+                <h1>Techs Mechs Robotics #30570</h1>
+                <p class="subtitle">Middle and High School Students Learning, Building, and Competing in Robotics</p>
+            </div>
+            <img src="pictures/team-assets/Logo.png" alt="Techs Mechs team logo">
+        </div>
+        <nav class="site-nav" aria-label="Main navigation">
+            <a href="#about">About</a>
+            <a href="#seasons">Our Seasons</a>
+            <a href="#robot">Our Robot</a>
+            <a href="#outreach">Outreach</a>
+            <a href="#support">Support the Team</a>
+            <a href="#team">Meet the Team</a>
+        </nav>
     </header>
     <main>
-        <section>
-            <h2>About Our Team</h2>
-            <p>We are a group of passionate middle schoolers on a mission to learn robotics, build awesome robots, and compete with other teams. We are based in Flower Mound, Texas, and our team, TechsMechs, was formed this year (2025). Follow our journey as we design, build, and program our robots!
-</p>
+        <section id="about" class="intro">
+            <h2>Our Mission</h2>
+            <p>We are FTC Team #30570, part of the Texas 4-H Robotics Club in Flower Mound, Texas. Our mission is to inspire and empower middle and high school students through hands-on robotics and STEM education while building skills in engineering, programming, teamwork, problem-solving, and leadership.</p>
+            <p>Through our robotics program and community outreach, we share STEM experiences with more than 500 students, encouraging curiosity, innovation, and interest in future STEM opportunities. Your support helps us continue this mission.</p>
+            <a href="#support">Support the Team</a>
         </section>
-        <section>
-            <h2>Team Progress Updates</h2>
-            <div class="progress-gallery">
-                <div class="progress-item">
-                    <img src="Robot-Photo.jpg" alt="Robot Build 1">
-                    <div><strong>Chassis Assembly</strong></div>
-                    <div>Finished the flywheel, ramp, and intake!</div>
-                </div>
-                <div class="progress-item">
-                    <img src="Wires-Photo.jpg" alt="Robot Build 2">
-                    <div><strong>Electronics Setup</strong></div>
-                    <div>Wiring up servos and motors. Lots of teamwork!</div>
-                </div>
-                <div class="progress-item">
-                    <img src="Code-Photo.png" alt="Robot Build 3">
-                    <div><strong>Programming</strong></div>
-                    <div>Optomizing our controls and auto.</div>
-                </div>
-                <!-- Add more progress items as needed -->
+        <section id="seasons">
+            <h2>Our Seasons</h2>
+            <div class="season-list">
+                <article class="progress-item season-card">
+                    <h3>2026–27 · BioBuzz</h3>
+                    <p>Our current season</p>
+                    <p>We’re designing and building our BioBuzz robot together. Here are a few highlights from our early build sessions.</p>
+                    <div class="season-photo-gallery">
+                        <figure>
+                            <img src="pictures/team-assets/DIY Hive.jpg" alt="Techs Mechs students working together at the DIY Hive">
+                            <figcaption>Learning and collaborating at the DIY Hive.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="pictures/team-assets/version 1.jpg" alt="First version of the team's 2026–27 BioBuzz robot">
+                            <figcaption>Version 1 of our BioBuzz robot.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="pictures/team-assets/Build Session 1.jpg" alt="Techs Mechs students building the BioBuzz robot during build session 1">
+                            <figcaption>Build Session 1: assembling and testing our ideas.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="pictures/team-assets/Build session 2.jpg" alt="Techs Mechs students building the BioBuzz robot during build session 2">
+                            <figcaption>Build Session 2: continuing our robot build as a team.</figcaption>
+                        </figure>
+                    </div>
+                </article>
+                <article class="progress-item season-card">
+                    <h3>2025–26 · Decode</h3>
+                    <p>Our rookie season</p>
+                    <div class="season-photo-gallery">
+                        <figure>
+                            <img src="pictures/team-assets/2025-26Season-picture2.png" alt="Techs Mechs robot during its 2025–26 Decode rookie season">
+                            <figcaption>Our robot during our first season.</figcaption>
+                        </figure>
+                        <figure>
+                            <img src="pictures/team-assets/2025-26Season-Robot.png" alt="Another view of the Techs Mechs Decode robot">
+                            <figcaption>A closer look at our rookie-season robot.</figcaption>
+                        </figure>
+                    </div>
+                    <h4>Last Season Success</h4>
+                    <p>The Techs Mechs 4-H Club made an impressive debut in the FIRST Tech Challenge! This team of six dedicated members earned the <strong>All-Star Rookie Judge’s Choice Award</strong> at their league tournament, advanced to Semi-Regionals as the only middle school rookie team among 13 rookie teams from Flower Mound, and received a grant from the Gene Haas Foundation to support their robotics program.</p>
+                    <p>At Semi-Regionals, the team also earned the <strong>Reach Award</strong> for their efforts to promote robotics and inspire others to get involved in STEM.</p>
+                    <p><a href="https://www.facebook.com/share/p/1CKYf6DBaJ/" target="_blank" rel="noopener noreferrer">Read our rookie-season Facebook post</a></p>
+                    <h4>Season Award Photos</h4>
+                    <figure class="season-award-photo">
+                        <img src="pictures/team-assets/2025-26-decode-awards.png" alt="Techs Mechs 2025–26 Decode season award and team collage">
+                        <figcaption>Celebrating our rookie-season awards and the team behind them.</figcaption>
+                    </figure>
+                </article>
             </div>
         </section>
-        <section>
+        <section id="robot">
+            <h2>Training New Team Members</h2>
+            <p class="training-intro">Returning teammates help new members learn by working together on the robot. New team members get hands-on practice with assembly, electronics, and programming while building confidence and sharing ideas.</p>
+            <div class="training-gallery">
+                <figure>
+                    <img src="pictures/team-assets/Robot-Photo.jpg" alt="Robot Build 1">
+                    <figcaption><strong>Build together</strong><br>Teammates introduce new members to the robot's chassis, mechanisms, and build process.</figcaption>
+                </figure>
+                <figure>
+                    <img src="pictures/team-assets/Wires-Photo.jpg" alt="Robot Build 2">
+                    <figcaption><strong>Learn the electronics</strong><br>Members work together to understand the wiring, motors, and servos.</figcaption>
+                </figure>
+                <figure>
+                    <img src="pictures/team-assets/Code-Photo.png" alt="Robot Build 3">
+                    <figcaption><strong>Practice programming</strong><br>Teammates share coding skills and learn to improve robot controls together.</figcaption>
+                </figure>
+                <figure>
+                    <img src="pictures/team-assets/Learning From Each Other.jpg" alt="A mentor and team members learning together during a robot build session">
+                    <figcaption><strong>Learn from each other</strong><br>Experienced teammates and mentors share ideas and help new members build their skills.</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section id="support" class="sponsorship-section">
+            <div class="support-heading">
+                <div>
+                    <h2>Support the Team</h2>
+                    <p>Your support helps us inspire students through hands-on robotics, build skills for the future, and share STEM experiences with more than 500 students.</p>
+                    <p>Businesses and community partners can support our mission through one of the sponsorship levels below.</p>
+                </div>
+                <img src="pictures/team-assets/2025-26Season-picture2.png" alt="Techs Mechs robot from the 2025–26 Decode season">
+            </div>
+            <div class="support-options-grid">
+                <div>
+                    <h2>Sponsorship Tiers</h2>
+                    <p>Choose a level that works for you. Each tier includes ways to recognize your support.</p>
+                    <div class="tier-grid">
+                        <article class="tier-card">
+                            <h3>Silver</h3>
+                            <p class="tier-price">$150–$499</p>
+                            <ul>
+                                <li>Small T-shirt logo</li>
+                                <li>Website mention</li>
+                                <li>Pit/banner listing</li>
+                                <li>Social shoutout</li>
+                            </ul>
+                        </article>
+                        <article class="tier-card">
+                            <h3>Gold</h3>
+                            <p class="tier-price">$500–$999</p>
+                            <ul>
+                                <li>Medium T-shirt logo</li>
+                                <li>All Silver benefits</li>
+                                <li>Website placement</li>
+                                <li>Two media shoutouts</li>
+                                <li>Pit display logo</li>
+                            </ul>
+                        </article>
+                        <article class="tier-card">
+                            <h3>Diamond</h3>
+                            <p class="tier-price">$1,000+</p>
+                            <ul>
+                                <li>Large T-shirt logo</li>
+                                <li>Robot logo</li>
+                                <li>Premium website placement</li>
+                                <li>Event shoutouts</li>
+                                <li>All Gold benefits</li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="support-contact">
+                        <p>Questions about sponsorships? Email <a href="mailto:techsmechs30570@gmail.com">techsmechs30570@gmail.com</a>.</p>
+                    </div>
+                </div>
+
+                <div id="donate" class="donation-section">
+                    <h2>Donate to the Team</h2>
+                    <p>Scan a code to donate.</p>
+                    <div class="donation-grid">
+                        <article class="donation-card">
+                            <h3>Venmo</h3>
+                            <img class="payment-qr" src="pictures/pay-via/venmo.png" alt="Venmo donation QR code">
+                            <p>Scan to donate with Venmo.</p>
+                        </article>
+                        <article class="donation-card">
+                            <h3>Zelle</h3>
+                            <img class="payment-qr" src="pictures/pay-via/zelle.png" alt="Zelle donation QR code">
+                            <p>Scan with your banking app, or send to:<br><a href="tel:+12143156766">+1 (214) 315-6766</a><br>Tejasvi Gundapuneedi</p>
+                        </article>
+                    </div>
+                    <p class="tax-note"><strong>501(c)(3) · EIN: 33-4229677.</strong> Donations may be tax-deductible as allowed by law. Sponsorships with promotional benefits may have different tax treatment; please consult your tax advisor.</p>
+                </div>
+            </div>
+
+            <h2>Our Sponsors</h2>
+            <p>Thank you to the organizations supporting our team.</p>
+            <div class="sponsorship-gallery">
+                <a href="https://www.ghaasfoundation.org/" class="sponsor-item" target="_blank" rel="noopener noreferrer">
+                    <img src="pictures/sponsor-logos/GeneHassLogo-Photo.jpg" alt="Gene Haas Foundation Logo">
+                    <div class="sponsor-name">Gene Haas Foundation</div>
+                </a>
+                <a href="https://www.coldstonecreamery.com/stores/24187" class="sponsor-item" target="_blank" rel="noopener noreferrer">
+                    <img src="pictures/sponsor-logos/ColdStone-Photo.png" alt="Cold Stone Creamery Logo">
+                    <div class="sponsor-name">Cold Stone Creamery</div>
+                </a>
+                <a href="https://refreshsmilesdfw.com/" class="sponsor-item" target="_blank" rel="noopener noreferrer">
+                    <img src="pictures/sponsor-logos/RefreshSmiles.png" alt="Refresh Smiles logo">
+                    <div class="sponsor-name">Refresh Smiles</div>
+                </a>
+            </div>
+        </section>
+        <section id="outreach">
             <h2>Outreach</h2>
-            <p>At our outreach events, including Hilton Kids Day and presenting to the North Texas STEM Alliance, we have spread awareness about FTC and the FIRST Program to hundreds of children. We also have helped younger teams bridge the gap between FLL and FTC, as well as tell them about and letting them try out our robot. We also gave out pamphlets that tell about FIRST. We have had an overall great time helping out in and performing these outreach events, and we hope to have more.
-        </p>        
+            <p>Through our outreach, we have shared hands-on STEM experiences with more than 500 students. We love inviting people to try driving or operating our robot: the excitement of making it move can spark curiosity in kids and adults alike. Every conversation is a chance to show that engineering and robotics are for everyone.</p>
+            <h3>2026–27 Summer Season · Hilton Kids Day</h3>
+            <p>At Hilton Kids Day, we introduced young visitors to robotics, explained how our robot works, and encouraged them to try it for themselves. Hands-on demos brought kids and adults together to ask questions, experiment, and imagine what they could build.</p>
             <div class="outreach-gallery">
                 <div class="outreach-box">
-                    <img src="Presentation.jpg" alt="Hilton Kids Day Photo 1">
-                    <img src="Demo.jpg.jpg" alt="Hilton Kids Day Photo 2">
-                    <div><strong>Hilton Kids Day</strong></div>
-                    <div>Presented to 150 kids and let them try out the robot!</div>
+                    <img src="pictures/outreach-events/HiltonKidsDay-Team.jpg" alt="Techs Mechs team at Hilton Kids Day during the 2026–27 summer season">
+                    <div><strong>Meet the team</strong></div>
+                    <div>Sharing our passion for robotics with the Hilton Kids Day community.</div>
                 </div>
                 <div class="outreach-box">
-                    <img src="NTX-Outreach1-Photo.JPG" alt="NTX STEM Alliance Photo 1">
-                    <img src="NTX-Outreach2-Photo.jpeg" alt="NTX STEM Alliance Photo 2">
+                    <img src="pictures/outreach-events/HiltonKidsDay-Presentation.jpg" alt="Techs Mechs presenting its robot to children and adults at Hilton Kids Day">
+                    <div><strong>Show and tell</strong></div>
+                    <div>Introducing visitors of all ages to our robot and how it works.</div>
+                </div>
+                <div class="outreach-box">
+                    <img src="pictures/outreach-events/HiltonKidsDay-PracticalDemo.jpg" alt="Children and families attending a Techs Mechs hands-on robot demonstration at Hilton Kids Day">
+                    <div><strong>Try the robot</strong></div>
+                    <div>Hands-on demonstrations invite kids and adults to explore robotics together.</div>
+                </div>
+            </div>
+            <h3>From FLL to FTC: Growing the Next Generation</h3>
+            <p>Connecting FIRST LEGO League (FLL) students with FIRST Tech Challenge (FTC) helps them see a path to keep learning and building. This bridge also supports succession planning: welcoming and onboarding future team members, sharing experience, and maintaining continuity as students move on.</p>
+            <div class="outreach-feature">
+                <figure>
+                    <img src="pictures/outreach-events/FLL-FTC.JPG" alt="Techs Mechs sharing the path from FIRST LEGO League to FIRST Tech Challenge">
+                    <figcaption>Helping FLL students explore what they can do next in FTC.</figcaption>
+                </figure>
+                <figure>
+                    <video controls playsinline preload="metadata" aria-label="Video about the FLL-to-FTC outreach experience">
+                        <source src="pictures/outreach-events/FLL-FTC-video.mov">
+                        Your browser does not support this video. <a href="pictures/outreach-events/FLL-FTC-video.mov">Open the video file</a>.
+                    </video>
+                    <figcaption>See how outreach can encourage younger students to continue their robotics journey.</figcaption>
+                </figure>
+            </div>
+            <h3>More Outreach Highlights</h3>
+            <div class="outreach-gallery">
+                <div class="outreach-box">
+                    <img src="pictures/outreach-events/Presentation.jpg" alt="Hilton Kids Day Photo 1">
+                    <img src="pictures/outreach-events/Demo.jpg.jpg" alt="Hilton Kids Day Photo 2">
+                    <div><strong>Earlier Hilton Kids Day</strong></div>
+                    <div>We presented to 150 kids and let them try out the robot.</div>
+                </div>
+                <div class="outreach-box">
+                    <img src="pictures/outreach-events/NTX-Outreach1-Photo.JPG" alt="NTX STEM Alliance Photo 1">
+                    <img src="pictures/outreach-events/NTX-Outreach2-Photo.jpeg" alt="NTX STEM Alliance Photo 2">
                     <div><strong>NTX STEM Alliance</strong></div>
                     <div>Spread awareness about FTC and FIRST to over 40 children in FLL, helping bridge the gap between FLL and FTC.</div>
                 </div>
                 <div class="outreach-box">
-                    <img src="Church-Outreach-Photo1.png" alt="Youth Club Outreach Photo 1">
-                    <img src="Church-Outreach-Photo2.png" alt="Youth Club Outreach Photo 1">
+                    <img src="pictures/outreach-events/Church-Outreach-Photo1.png" alt="Youth Club Outreach Photo 1">
+                    <img src="pictures/outreach-events/Church-Outreach-Photo2.png" alt="Youth Club Outreach Photo 1">
                     <div><strong>Youth Club</strong></div>
                     <div>Spread FTC to a youth club, increasing interest in robotics.</div>
                 </div>
                 <div class="outreach-box">
-                    <img src="Pybricks-Outreach-Photo1.png" alt="Pybricks Club Outreach Photo 1">
-                    <img src="Pybricks-Outreach-Photo2.png" alt="Pybricks Club Outreach Photo 1">
+                    <img src="pictures/outreach-events/Pybricks-Outreach-Photo1.png" alt="Pybricks Club Outreach Photo 1">
+                    <img src="pictures/outreach-events/Pybricks-Outreach-Photo2.png" alt="Pybricks Club Outreach Photo 1">
                     <div><strong>Pybricks Seminar</strong></div>
                     <div>Taught over 20 kids how to use Pybricks and spread knowledge of FLL and FTC.</div>
                 </div>
                 <div class="outreach-box">
-                    <img src="Pamphlet.png.png" alt="Flyer">
+                    <img src="pictures/outreach-events/Pamphlet.png.png" alt="Flyer">
                     <div><strong>Pamphlets</strong></div>
                     <div>Gave out pamphlets to parents about FIRST.</div>
                 </div>
+                <div class="outreach-box">
+                    <img src="pictures/outreach-events/4H-pict1 (1).jpeg" alt="Techs Mechs member demonstrating the robot at the Texas 4-H Open House">
+                    <img src="pictures/outreach-events/4H-pict1 (2).jpeg" alt="A young visitor trying the Techs Mechs robot at the Texas 4-H Open House">
+                    <img src="pictures/outreach-events/4H-pict1 (3).jpeg" alt="Techs Mechs member helping a visitor drive the robot at the Texas 4-H Open House">
+                    <div><strong>Texas 4-H Open House</strong></div>
+                    <div>Visitors got a hands-on introduction to robotics and the chance to try driving our robot.</div>
+                </div>
             </div>
         </section>
-        <section>
+        <section id="team">
             <h2>Meet the Team</h2>
-            <div class="team-members">
+            <h3>Current Team (2026–27)</h3>
+            <div class="team-members current-team-members">
                 <div class="member-card">
-                    <img src="Ajay-Photo.jpg" alt="Team Member 1">
+                    <img src="pictures/team-members/Ajay-Photo.jpg" alt="Team Member 1">
                     <div class="member-name">Ajay Mathukumalli</div>
                     <div class="member-role">Team Member</div>
                 </div>
                 <div class="member-card">
-                    <img src="Jay-Photo.jpg" alt="Team Member 2">
+                    <img src="pictures/team-members/Jay-Photo.jpg" alt="Team Member 2">
                     <div class="member-name">Jayadev Pappu</div>
                     <div class="member-role">Team Member</div>
                 </div>
                 <div class="member-card">
-                    <img src="Adarsh-Photo.png" alt="Team Member 3">
+                    <img src="pictures/team-members/Adarsh-Photo.png" alt="Team Member 3">
                     <div class="member-name">Adarsh Balaraman</div>
                     <div class="member-role">Team Member</div>
                 </div>
                 <div class="member-card">
-                    <img src="" alt="Team Member 4">
+                    <img src="pictures/team-members/Sai-Photo.png" alt="Saikrishna">
                     <div class="member-name">Saikrishna</div>
                     <div class="member-role">Team Member</div>
                 </div>
                 <div class="member-card">
-                    <img src="Agilin-photo.jpg" alt="Team Member 5">
+                    <img src="pictures/team-members/Agilin-photo.jpg" alt="Team Member 5">
                     <div class="member-name">Agilan Kuberan</div>
                     <div class="member-role">Team Member</div>
                 </div>
                 <div class="member-card">
-                    <img src="Enzo-Photo.jpg" alt="Team Member 6">
+                    <img src="pictures/team-members/Enzo-Photo.jpg" alt="Team Member 6">
                     <div class="member-name">Enzo Woodmansee</div>
                     <div class="member-role">Team Member</div>
                 </div>
-                <div class="member-card">
-                    <div class="member-name">Raghu Mathukumalli</div>
-                    <div class="member-role">Mentor</div>
-                </div>
-                <div class="member-card">
-                    <div class="member-name">Tejasvi Gundapuneedi</div>
-                    <div class="member-role">Mentor</div>
-                </div>
-
                 <!-- Add more member cards as needed -->
             </div>
-        </section>
-        <section>
-            <h2>Our Sponsors</h2>
-            <div class="sponsorship-gallery">
-                <a href="https://www.ghaasfoundation.org/" class="sponsor-item" target="_blank" rel="noopener noreferrer">
-                    <img src="GeneHassLogo-Photo.jpg" alt="Gene Haas Foundation Logo">
-                    <div class="sponsor-name">Gene Haas Foundation</div>
-                </a>
-                <a href="https://www.coldstonecreamery.com/stores/24187" class="sponsor-item" target="_blank" rel="noopener noreferrer">
-                    <img src="ColdStone-Photo.png" alt="Cold Stone Creamery Logo">
-                    <div class="sponsor-name">Cold Stone Creamery</div>
-                </a>
-            </div>
+            <details class="alumni-details">
+                <summary>Alumni (2025–26)</summary>
+                <div class="team-members">
+                    <div class="member-card">
+                        <img src="pictures/team-members/Charith-Photo.jpg" alt="Charith Basnayake">
+                        <div class="member-name">Charith Basnayake</div>
+                        <div class="member-role">2025–26 Team Member</div>
+                    </div>
+                    <div class="member-card">
+                        <img src="pictures/team-members/Jason-Photo.jpg" alt="Jason Westgate">
+                        <div class="member-name">Jason Westgate</div>
+                        <div class="member-role">2025–26 Team Member</div>
+                    </div>
+                </div>
+            </details>
+            <details class="mentor-details">
+                <summary>Meet our mentors</summary>
+                <div class="team-members">
+                    <div class="member-card">
+                        <div class="member-name">Raghu Mathukumalli</div>
+                        <div class="member-role">Mentor</div>
+                    </div>
+                    <div class="member-card">
+                        <div class="member-name">Tejasvi Gundapuneedi</div>
+                        <div class="member-role">Mentor</div>
+                    </div>
+                </div>
+            </details>
         </section>
     </main>
     <footer>
-       <p> Our Email - techsmechs30570@gmail.com <br>
-      Our Youtube Channel - <a href="https://www.youtube.com/@TechsMechs30570">youtube.com/@TechsMechs30570</a></p>
+       <p>Contact us: <a href="mailto:techsmechs30570@gmail.com">techsmechs30570@gmail.com</a><br>
+      Our YouTube channel: <a href="https://www.youtube.com/@TechsMechs30570">youtube.com/@TechsMechs30570</a><br>
+      Follow us on Instagram: <a href="https://www.instagram.com/techsmechs30570/" target="_blank" rel="noopener noreferrer">instagram.com/techsmechs30570</a></p>
     </footer>
+    <dialog class="photo-viewer" aria-label="Enlarged photo">
+        <button class="photo-viewer-close" type="button" aria-label="Close enlarged photo">Close</button>
+        <img alt="">
+        <p></p>
+    </dialog>
+    <script>
+        const photoViewer = document.querySelector(".photo-viewer");
+        const photoViewerImage = photoViewer.querySelector("img");
+        const photoViewerCaption = photoViewer.querySelector("p");
+        const photoViewerClose = photoViewer.querySelector(".photo-viewer-close");
+
+        function openPhotoViewer(image) {
+            photoViewerImage.src = image.src;
+            photoViewerImage.alt = image.alt;
+            photoViewerCaption.textContent = image.alt;
+            photoViewer.showModal();
+        }
+
+        document.querySelectorAll("main img:not(.sponsor-item img)").forEach((image) => {
+            image.tabIndex = 0;
+            image.setAttribute("role", "button");
+            image.setAttribute("aria-label", `View larger image: ${image.alt || "image"}`);
+            image.addEventListener("click", () => openPhotoViewer(image));
+            image.addEventListener("keydown", (event) => {
+                if (event.key === "Enter" || event.key === " ") {
+                    event.preventDefault();
+                    openPhotoViewer(image);
+                }
+            });
+        });
+
+        photoViewerClose.addEventListener("click", () => photoViewer.close());
+        photoViewer.addEventListener("click", (event) => {
+            if (event.target === photoViewer) {
+                photoViewer.close();
+            }
+        });
+    </script>
 </body>
                     </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
